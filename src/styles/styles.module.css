@@ -1,0 +1,11 @@
+.svg {
+    width: 250px;
+    text-align: center;
+    align-items: center;
+  }
+  
+  .container {
+    align-items: center;
+    height: 100%;
+    justify-content: left;
+  }
