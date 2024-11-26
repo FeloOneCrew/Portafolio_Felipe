@@ -21,9 +21,8 @@ function Footer() {
               <img 
                 src="/src/images/LogoFelo-blanco.png" 
                 alt="Logo Felo" 
-                className="w-14 h-14 object-contain" 
+                className="w-22 h-14 object-contain" 
               /> 
-              <h3 className="text-xl font-bold">Felipe Dev</h3>
             </div>
             <p className="text-sm">
               Desarrollador Web especializado en crear experiencias digitales.
@@ -31,7 +30,7 @@ function Footer() {
           </div>
 
           {/* Redes Sociales */}
-          <div className="flex justify-center space-x-4 lg:order-last">
+          <div className="flex justify-center space-x-4">
             <a
               href="https://www.facebook.com/FeloOneCrew"
               target="_blank"
@@ -67,8 +66,8 @@ function Footer() {
           </div>
 
           {/* Navegación del footer */}
-          <div className="flex flex-col items-center lg:items-end text-center lg:text-right">
-            <ul className="flex flex-wrap justify-center lg:justify-end space-x-4 space-y-2 lg:space-y-0">
+          <div className="flex flex-col items-center lg:items-center text-center lg:text-right">
+            <ul className="flex flex-wrap justify-center lg:justify-center space-x-4 space-y-2 lg:space-y-0">
               <li>
                 <Link
                   to="/"
@@ -108,7 +107,7 @@ function Footer() {
         {/* Derechos reservados */}
         <div className="text-center mt-6">
           <p className="text-xs text-gray-300">
-            © 2024 Felipe Dev. Todos los derechos reservados.
+            © 2024 Felipe Developer. Todos los derechos reservados.
           </p>
         </div>
       </div>
