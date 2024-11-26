@@ -275,7 +275,7 @@ function Header() {
 export default Header;
 */
 
-import React, { useState, ReactNode } from "react";
+import React, {useState, useEffect} from "react";
 import { useSpring, animated } from "@react-spring/web";
 import { useDrag } from '@use-gesture/react'
 
@@ -287,6 +287,7 @@ const AnimFeDisplacementMap = animated("feDisplacementMap");
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [open, toggle] = useState(false);
+  const [isActive, setIsActive] = useState(true);
 
   const [{ freq, factor, scale, opacity }] = useSpring(
     () => ({
@@ -343,15 +344,15 @@ function Header() {
       range: [50, 300],
       output: [0.5, 1],
       extrapolate: "clamp",
-    });
+  });
 
-    const text = textById[id] || "Texto por defecto";
+    const text = textById[id] || "Hi";
   
     const handleClick = (e) => {
       e.preventDefault();
       scrollToSection(id);
     };
-  
+
     return (
       <animated.div
         {...bind()}
@@ -373,6 +374,16 @@ function Header() {
     );
   };
 
+  {'Efecto icono flecha'}
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsActive((prev) => !prev); // Alterna entre encendido y apagado
+    }, 1500); // Cada 2 segundos
+
+    // Limpia el intervalo al desmontar el componente
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <header className="fixed top-0 left-0 right-0 bg-white-900 text-[#3a3c3d] p-0 z-50">
       <div>
@@ -392,7 +403,7 @@ function Header() {
             href="#inicio"
             onClick={() => setIsMenuOpen(true)}
           >
-             {/*
+            {/*
               <img
               src={
                 isMenuOpen
@@ -1236,7 +1247,13 @@ function Header() {
           >
             <div className="flex flex-col md:flex-row">
               <div className={styles.container}>
-                <Slider id="inicio">Inicio</Slider>
+              <Slider id="inicio">
+                <div>
+                  <i className={`bi bi-arrow-left ${isActive ? "icon-white" : "text-gray-600"}`}
+                  style={{ marginRight: "10px" }}
+                  ></i>Inicio
+                </div>
+              </Slider>
               </div>
               <div className={styles.container}>
                 <Slider id="about">Acerca de mí</Slider>
@@ -1244,8 +1261,13 @@ function Header() {
               <div className={styles.container}>
                 <Slider id="projects">Proyectos</Slider>
               </div>
-              <div className={styles.container}>
-                <Slider id="contact">Contactos</Slider>
+              <div className={styles.container} style={{ display: 'flex', alignItems: 'right' }}>
+                <Slider id="contact"> 
+                  <div> Contactos <i className={`bi bi-arrow-right ${isActive ? "icon-white" : "text-gray-700"}`}
+                    style={{ marginLeft: "10px" }}
+                    ></i>
+                  </div>
+                </Slider>
               </div>
             </div>
           </nav>

@@ -77,3 +77,9 @@
     text-align: center;
     cursor: pointer;
   }
+
+  .icon-white {
+    color: white;
+    text-align: center;
+    align-items: center;
+  }

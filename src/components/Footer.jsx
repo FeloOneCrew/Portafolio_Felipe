@@ -35,7 +35,7 @@ function Footer() {
               href="https://www.facebook.com/FeloOneCrew"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl hover:text-blue-400 transition-colors"
+              className="text-2xl hover:text-blue-400 transition-colors"
             >
               <FaFacebookF />
             </a>
@@ -43,7 +43,7 @@ function Footer() {
               href="https://www.linkedin.com/in/andres-felipe-gomez-herrera/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl hover:text-blue-400 transition-colors"
+              className="text-2xl hover:text-blue-400 transition-colors"
             >
               <FaLinkedinIn />
             </a>
@@ -51,7 +51,7 @@ function Footer() {
               href="https://github.com/FeloOneCREW"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl hover:text-black transition-colors"
+              className="text-2xl hover:text-black transition-colors"
             >
               <FaGithub />
             </a>
@@ -59,7 +59,7 @@ function Footer() {
               href="https://www.instagram.com/felo_1upcrew/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xl hover:text-fuchsia-600 transition-colors"
+              className="text-2xl hover:text-fuchsia-600 transition-colors"
             >
               <FaInstagram />
             </a>
